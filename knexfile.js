@@ -4,6 +4,6 @@ module.exports = {
 
   development: {
     client: 'pg',
-    connection: 'postgres://localhost/ner-web-store',
+    connection: 'postgres://localhost/nerstore',
   }
   };
