@@ -8,6 +8,6 @@ module.exports = {
   },
   test: {
     client: 'pg',
-    connection: 'postgres://localhost/testnerstore',
+    connection: 'postgres://localhost/dummynerstore',
   }
   };
