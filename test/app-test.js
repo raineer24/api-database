@@ -1,0 +1,3 @@
+describe('CRUD stickers', () => {
+
+});
