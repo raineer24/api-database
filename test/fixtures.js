@@ -50,7 +50,7 @@ const sticker = {
   
     "title": "GEek stickers",
     "description": "geek logo",
-    "rating": "2",
+    "rating": "7",
     "url": "https://devstickers.com/assets/img/pro/e4is.png"
    
 };
