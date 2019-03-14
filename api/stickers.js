@@ -15,10 +15,14 @@ router.get('/', (req, res) => {
    });
 });
 
-router.get('/:id', isValidId, (req, res) => {
-    res.json({
-        message: 'Hello!'
-    })
+router.get('/:id', isValidId, (req, res, next) => {
+    queries.getOne(req.params.id).then(sticker => {
+        if (sticker) {
+            res.json(sticker);
+        } else {
+            next();
+        }
+    });
 });
 
 module.exports = router;
