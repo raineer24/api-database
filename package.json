@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "start": "node ./bin/www",
-    "dev": "nodemon"
+    "dev": "nodemon",
+    "test": "(dropdb --if-exists dummynerstore && createdb dummynerstore) && NODE_ENV=test mocha"
   },
   "dependencies": {
     "cookie-parser": "~1.4.3",
@@ -17,6 +18,9 @@
     "pg": "^7.8.2"
   },
   "devDependencies": {
-    "nodemon": "^1.18.10"
+    "chai": "^4.2.0",
+    "mocha": "^6.0.2",
+    "nodemon": "^1.18.10",
+    "supertest": "^4.0.0"
   }
 }
