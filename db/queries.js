@@ -1,9 +1,19 @@
 const knex = require('./knex'); // the connection!
 
 module.exports = {
-    getAll() {
-        return knex('sticker');
-    },
+    getAll(query) {
+        const knexQuery = knex('sticker');
+
+        if(query.title) {
+            knexQuery.where('title', 'like', `%${query.title}%`);
+        }
+
+        if(query.description) {
+            knexQuery.where('description', 'like', `%${query.description}%`);
+        }
+
+        return knexQuery;
+    },  
     getOne(id) {
         return knex('sticker').where('id', id).first();
     },
@@ -15,5 +25,5 @@ module.exports = {
     },
     delete(id) {
         return knex('sticker').where('id', id).del();
-    }
+    } 
 }  
