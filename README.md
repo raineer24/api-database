@@ -22,6 +22,6 @@ npm test
 
 [TODO Checklist](TODO.md)
 
-## ERD
+## VIDEO
 
-[![IMAGE ALT TEXT HERE](http://devstickers.com/assets/img/pro/m539.png)](https://www.youtube.com/watch?v=7OaScd7sWPw&list=PLM_i0obccy3uwR6ZYa7QE03xDRAqs4Aso&index=16)
+[![IMAGE ALT TEXT HERE](https://i.imgur.com/fziyA9i.png)](https://www.youtube.com/playlist?list=PLM_i0obccy3uwR6ZYa7QE03xDRAqs4Aso)
