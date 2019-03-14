@@ -1,4 +1,4 @@
-# CRUD Stickers
+# CRUD API STICKERS Tutorial
 
 ## Setup
 
@@ -24,4 +24,4 @@ npm test
 
 ## ERD
 
-[![IMAGE ALT TEXT HERE](http://devstickers.com/assets/img/pro/m539.png)](https://www.youtube.com/watch?v=YOUTUBE_VIDEO_ID_HERE)
+[![IMAGE ALT TEXT HERE](http://devstickers.com/assets/img/pro/m539.png)](https://www.youtube.com/watch?v=7OaScd7sWPw&list=PLM_i0obccy3uwR6ZYa7QE03xDRAqs4Aso&index=16)
