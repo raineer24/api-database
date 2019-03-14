@@ -5,8 +5,14 @@ const router = express.Router();
 const queries = require('../db/queries');
 
 function isValidId(req, res, next) {
-    if(!isNaN(req.params.id)) return next();
+    if (!isNaN(req.params.id)) return next();
     next(new Error('Invalid ID'));
+}
+
+function validSticker(req, res, next) {
+    const hasTitle = typeof sticker.title == 'string' && sticker.title.trim() !='';
+    const hasUrl = typeof sticker.url == 'string' && sticker.url.trim() != '';
+    return hasTitle && hasUrl;
 }
 
 router.get('/', (req, res) => {
@@ -25,6 +31,13 @@ router.get('/:id', isValidId, (req, res, next) => {
     });
 });
 
-router.post('/')
+router.post('/', (req, res, next) => {
+   if(validSticker(req.body)) {
+       //insert into db
+
+   } else {
+       next(new Error('Invalid sticker'));
+   }
+});
 
 module.exports = router;
