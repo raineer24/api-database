@@ -1,10 +1,17 @@
 # api-database
 postgres database and knex sql
 
+https://www.youtube.com/watch?v=4DRh2NUOGMc&amp=&index=12
 
-https://www.youtube.com/watch?v=gg8UsLmCS1U&list=PLM_i0obccy3uwR6ZYa7QE03xDRAqs4Aso&index=7
+
+CRUD API Part 12 - Show one record with GET /stickers/:id
+
+** Show one record with GET /stickers/:id**:
+
+• Validate id:
+• Create query:
+• Add test:
 
 
-npm test
 
-npm run dev
+
