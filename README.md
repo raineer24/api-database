@@ -1,13 +1,7 @@
-# api-database
-postgres database and knex sql
-
-https://www.youtube.com/watch?v=7OYqbiMKwWQ&list=PLM_i0obccy3uwR6ZYa7QE03xDRAqs4Aso&index=14
-
-** Create a record test**:
-*  Create record test [api/app-test.js folder] line 58
-* Add const sticker post  [api/fixture.js folder] line 49
-
-
-
-
-- [ ] CRUD API Part 15 - Update a record with PUT /stickers/id
+##  Update a record with PUT  /api/v1/stickers/:id
+* Update a record with PUT  /api/v1/stickers/:id
+  * validate id| line 7 and line 14,15 and 16
+  * update (validate sticker function) hasDescription and hasRating
+  *  validate updates
+  *  create queries line 50 [app/stickers.js] && line 13 [db/queries.js]
+  *  fix error line 16 (sticker.rating)
