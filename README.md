@@ -1,7 +1,6 @@
 # api-database
 postgres database and knex sql
 
-
 https://www.youtube.com/watch?v=7OYqbiMKwWQ&list=PLM_i0obccy3uwR6ZYa7QE03xDRAqs4Aso&index=14
 
 ** Create a record test**:
