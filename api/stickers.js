@@ -12,7 +12,9 @@ function isValidId(req, res, next) {
 function validSticker(sticker) {
     const hasTitle = typeof sticker.title == 'string' && sticker.title.trim() !='';
     const hasUrl = typeof sticker.url == 'string' && sticker.url.trim() != '';
-    return hasTitle && hasUrl;
+    const hasDesription = typeof sticker.description == 'string' && sticker.description.trim() != '';
+    const hasRating = !isNaN(sticker);
+    return hasTitle && hasUrl && hasRating;
 }
 
 router.get('/', (req, res) => {
