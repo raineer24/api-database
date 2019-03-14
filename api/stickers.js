@@ -10,10 +10,20 @@ function isValidId(req, res, next) {
 }
 
 function validSticker(sticker) {
-    const hasTitle = typeof sticker.title == 'string' && sticker.title.trim() !='';
-    const hasUrl = typeof sticker.url == 'string' && sticker.url.trim() != '';
-    return hasTitle && hasUrl;
-}
+    const hasTitle = typeof sticker.title == 'string' && sticker.title.trim() != '';
+    const hasURL = typeof sticker.url == 'string' && sticker.url.trim() != '';
+    const hasDescription = typeof sticker.description == 'string' && sticker.description.trim() != '';
+    const hasRating = !isNaN(sticker.rating);
+    return hasTitle && hasDescription && hasURL && hasRating;
+  }
+
+// function validSticker(sticker) {
+//     const hasTitle = typeof sticker.title == 'string' && sticker.title.trim() !='';
+//     const hasUrl = typeof sticker.url == 'string' && sticker.url.trim() != '';
+//     const hasDescription = typeof sticker.description == 'string' && sticker.description.trim() != '';
+//     const hasRating = !isNaN(sticker);
+//     return hasTitle && hasDescription && hasUrl && hasRating;
+// }
 
 router.get('/', (req, res) => {
    queries.getAll().then(stickers => {
@@ -40,6 +50,17 @@ router.post('/', (req, res, next) => {
    } else {
        next(new Error('Invalid sticker'));
    }
+});
+
+router.put('/:id', isValidId, (req, res, next) => {
+    if(validSticker(req.body)) {
+        //update the sticker
+        queries.update(req.params.id, req.body).then(stickers => {
+            res.json(stickers[0]);
+        });
+    } else {
+        next(new Error('Invalid sticker'));
+    }
 });
 
 module.exports = router;
