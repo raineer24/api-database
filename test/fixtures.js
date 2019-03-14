@@ -46,6 +46,16 @@ const stickers = [
     url: 'http://devstickers.com/assets/img/pro/4gem.png' } 
 ];
 
+const sticker = {
+  
+    "title": "GEek stickers",
+    "description": "geek logo",
+    "rating": "2",
+    "url": "https://devstickers.com/assets/img/pro/e4is.png"
+   
+};
+
     module.exports = {
-        stickers
+        stickers,
+        sticker
     }
